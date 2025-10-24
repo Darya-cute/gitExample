@@ -1,0 +1,58 @@
+@startuml
+!theme plain
+left to right direction
+actor "Клиент" as Client
+actor "Админ" as Admin
+
+rectangle "Система учета вещей в прачечной" {
+    'Клиент
+    usecase "Авторизоваться на сайте прачечной" as UC1
+    usecase "Оформить заявку" as UC2
+    usecase "Оплатить услугу" as UC3
+
+    'Include для Клиента
+    usecase "Указать ФИО, номер телефона, почту" as UC4
+    usecase "Указать количество вещей" as UC5
+    usecase "Указать степень загрязнения вещей" as UC6
+    usecase "Указать удобное время" as UC7
+    usecase "Подтвердить заявку" as UC8
+
+    'Админ
+    usecase "Получить заявку" as UC9
+    usecase "Обработать заявку" as UC10
+    usecase "Ввести данные о клиенте" as UC11
+    usecase "Проверить оплату" as UC12
+
+    'Include для Админа
+    usecase "Получить подтверждение от клиента" as UC13
+  }
+
+  'Связи актеров с use cases
+  Client -- UC1
+  Client -- UC2
+  Client -- UC3
+
+
+  Admin -- UC9
+  Admin -- UC10
+  Admin -- UC11
+  Admin -- UC12
+
+  'Include отношения
+  UC2 ..> UC4 : <<include>>
+  UC2 ..> UC5 : <<include>>
+  UC2 ..> UC6 : <<include>>
+  UC2 ..> UC7 : <<include>>
+  UC2 ..> UC8 : <<include>>
+
+  UC11 ..> UC13 : <<include>>
+
+  @enduml
+
+
+
+
+
+
+
+
