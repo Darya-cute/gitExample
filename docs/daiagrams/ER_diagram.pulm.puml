@@ -16,7 +16,6 @@ entity APPLICATION {
   # Client_ID: number
   Number_of_items
   # PollutionStatus_ID: text
-  Time_of_receipt: datetime
   # ApplicationStatus_ID: text
 }
 

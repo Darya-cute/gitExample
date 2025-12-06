@@ -14,8 +14,7 @@ rectangle "Система учета вещей в прачечной" {
     usecase "Указать ФИО, номер телефона, почту" as UC4
     usecase "Указать количество вещей" as UC5
     usecase "Указать степень загрязнения вещей" as UC6
-    usecase "Указать удобное время" as UC7
-    usecase "Подтвердить заявку" as UC8
+    usecase "Подтвердить заявку" as UC7
 
     'Админ
     usecase "Получить заявку" as UC9
@@ -43,7 +42,6 @@ rectangle "Система учета вещей в прачечной" {
   UC2 ..> UC5 : <<include>>
   UC2 ..> UC6 : <<include>>
   UC2 ..> UC7 : <<include>>
-  UC2 ..> UC8 : <<include>>
 
   UC11 ..> UC13 : <<include>>
 
