@@ -1,0 +1,51 @@
+@startuml
+
+entity CLIENT {
+  * Client_ID: number
+  --
+  Last_name: text
+  Name: text
+  Patronymic: text
+  Phone_number: number
+  E-mail: text
+}
+
+entity APPLICATION {
+  * Application_ID: number
+  --
+  # Client_ID: number
+  Number_of_items
+  # PollutionStatus_ID: text
+  Time_of_receipt: datetime
+  # ApplicationStatus_ID: text
+}
+
+entity POLLUTION_STATUS {
+  * PollutionStatus_ID: number
+  --
+  Name: text
+  Comment: text
+}
+
+entity APPLICATION_STATUS {
+  * ApplicationStatus_ID: number
+  --
+  Name: text
+  Comment: text
+}
+
+entity ADMIN {
+  * Admin_ID: number
+  --
+  Last_name: text
+  Name: text
+  Patronymic: text
+  Phone_number: number
+  E-mail: text
+}
+
+CLIENT::Client_ID ||-down-|{ APPLICATION::Client_ID
+POLLUTION_STATUS::PollutionStatus_ID ||-down-|{ APPLICATION::PollutionStatus_ID
+APPLICATION_STATUS::ApplicationStatus_ID ||-down-|{ APPLICATION::ApplicationStatus_ID
+
+@enduml

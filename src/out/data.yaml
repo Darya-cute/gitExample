@@ -1,0 +1,36 @@
+- application_id: 2
+  application_status:
+    application_status_id: COMPLETED
+    comment: Заявка ожидает оплаты
+    name: Ожидание
+  client:
+    client_id: 3
+    email: sidorov@mail.ru
+    last_name: Федоров
+    name: Алексей
+    patronymic: Владимирович
+    phone_number: 79169998877
+  number_of_items: 14
+  pollution_status:
+    comment: Сильное загрязнение
+    name: Сильное
+    pollution_status_id: HIGH
+  time_of_receipt: '2025-11-24 23:48:53'
+- application_id: 3
+  application_status:
+    application_status_id: IN_PROGRESS
+    comment: Заявка в работе
+    name: В обработке
+  client:
+    client_id: 6
+    email: alexmix45@mail.ru
+    last_name: Михалков
+    name: Александр
+    patronymic: Евгеньевич
+    phone_number: 79602358469
+  number_of_items: 15
+  pollution_status:
+    comment: Сильное загрязнение
+    name: Сильное
+    pollution_status_id: HIGH
+  time_of_receipt: '2025-11-26 21:46:14'

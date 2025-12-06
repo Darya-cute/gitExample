@@ -1,0 +1,48 @@
+[
+  {
+    "application_id": 2,
+    "number_of_items": 14,
+    "time_of_receipt": "2025-11-24 23:48:53",
+    "client": {
+      "client_id": 3,
+      "last_name": "Федоров",
+      "name": "Алексей",
+      "patronymic": "Владимирович",
+      "phone_number": 79169998877,
+      "email": "sidorov@mail.ru"
+    },
+    "pollution_status": {
+      "pollution_status_id": "HIGH",
+      "name": "Сильное",
+      "comment": "Сильное загрязнение"
+    },
+    "application_status": {
+      "application_status_id": "COMPLETED",
+      "name": "Ожидание",
+      "comment": "Заявка ожидает оплаты"
+    }
+  },
+  {
+    "application_id": 3,
+    "number_of_items": 15,
+    "time_of_receipt": "2025-11-26 21:46:14",
+    "client": {
+      "client_id": 6,
+      "last_name": "Михалков",
+      "name": "Александр",
+      "patronymic": "Евгеньевич",
+      "phone_number": 79602358469,
+      "email": "alexmix45@mail.ru"
+    },
+    "pollution_status": {
+      "pollution_status_id": "HIGH",
+      "name": "Сильное",
+      "comment": "Сильное загрязнение"
+    },
+    "application_status": {
+      "application_status_id": "IN_PROGRESS",
+      "name": "В обработке",
+      "comment": "Заявка в работе"
+    }
+  }
+]
