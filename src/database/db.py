@@ -60,7 +60,6 @@ class Database:
                 Client_ID INTEGER NOT NULL,
                 Number_of_items INTEGER NOT NULL,
                 PollutionStatus_ID TEXT NOT NULL,
-                Time_of_receipt DATETIME DEFAULT CURRENT_TIMESTAMP,
                 ApplicationStatus_ID TEXT NOT NULL,
                 FOREIGN KEY(Client_ID) REFERENCES Client(Client_ID),
                 FOREIGN KEY(PollutionStatus_ID) REFERENCES PollutionStatus(PollutionStatus_ID),

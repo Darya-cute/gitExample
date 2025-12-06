@@ -84,7 +84,7 @@ class LaundrySystem:
             raise ValueError(f"Статус заявки {application_status_id} не существует")
         if number_of_items <= 0:
             raise ValueError("Количество вещей должно быть положительным числом")
-        application = Application(None, client_id, number_of_items, pollution_status_id, None, application_status_id)
+        application = Application(None, client_id, number_of_items, pollution_status_id, application_status_id)
         return self.application_repo.save(application)
 
     def update_application_status(self, application_id, status_id):

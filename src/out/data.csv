@@ -1,3 +1,4 @@
-application_id,number_of_items,time_of_receipt,client_id,client_name,client_phone,pollution_status,application_status
-2,14,2025-11-24 23:48:53,3,Федоров Алексей,79169998877,Сильное,Ожидание
-3,15,2025-11-26 21:46:14,6,Михалков Александр,79602358469,Сильное,В обработке
+application_id,number_of_items,client_id,client_name,client_phone,pollution_status,application_status
+2,14,3,Федоров Алексей,79169998877,Сильное,Ожидание
+3,15,6,Михалков Александр,79602358469,Сильное,В обработке
+4,5,1,Невская Есения,79161234567,Небольшое,В обработке

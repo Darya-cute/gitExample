@@ -36,7 +36,6 @@ class DataExporter:
             application_data = {
                 "application_id": app.Application_ID,
                 "number_of_items": app.Number_of_items,
-                "time_of_receipt": app.Time_of_receipt,
                 "client": {
                     "client_id": client.Client_ID if client else None,
                     "last_name": client.last_name if client else None,
@@ -71,7 +70,7 @@ class DataExporter:
             writer = csv.writer(f)
             # Заголовки
             writer.writerow([
-                "application_id", "number_of_items", "time_of_receipt",
+                "application_id", "number_of_items",
                 "client_id", "client_name", "client_phone",
                 "pollution_status", "application_status"
             ])
@@ -81,7 +80,6 @@ class DataExporter:
                 writer.writerow([
                     item["application_id"],
                     item["number_of_items"],
-                    item["time_of_receipt"],
                     item["client"]["client_id"],
                     f"{item['client']['last_name']} {item['client']['name']}",
                     item["client"]["phone_number"],
@@ -98,7 +96,6 @@ class DataExporter:
 
             ET.SubElement(app_elem, "id").text = str(item["application_id"])
             ET.SubElement(app_elem, "number_of_items").text = str(item["number_of_items"])
-            ET.SubElement(app_elem, "time_of_receipt").text = str(item["time_of_receipt"])
 
             # Клиент
             client_elem = ET.SubElement(app_elem, "client")

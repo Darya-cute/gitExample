@@ -15,7 +15,6 @@
     comment: Сильное загрязнение
     name: Сильное
     pollution_status_id: HIGH
-  time_of_receipt: '2025-11-24 23:48:53'
 - application_id: 3
   application_status:
     application_status_id: IN_PROGRESS
@@ -33,4 +32,20 @@
     comment: Сильное загрязнение
     name: Сильное
     pollution_status_id: HIGH
-  time_of_receipt: '2025-11-26 21:46:14'
+- application_id: 4
+  application_status:
+    application_status_id: IN_PROGRESS
+    comment: Заявка в работе
+    name: В обработке
+  client:
+    client_id: 1
+    email: nevskay@mail.ru
+    last_name: Невская
+    name: Есения
+    patronymic: Ивановна
+    phone_number: 79161234567
+  number_of_items: 5
+  pollution_status:
+    comment: Легкое загрязнение
+    name: Небольшое
+    pollution_status_id: LOW

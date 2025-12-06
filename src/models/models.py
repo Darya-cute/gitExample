@@ -70,14 +70,12 @@ class Application:
     - client_ID: уникальный идентификатор клиента (FK)
     - number_of_items: количество вещей в заявке (FK)
     - pollutionStatus_ID: степень загрязнения
-    - time_of_receipt: время получения вещей
     - applicationStatus_ID: статус заявки (FK)
     """
-    def __init__(self, id, client_ID, number_of_items, pollutionStatus_ID, time_of_receipt, applicationStatus_ID):
+    def __init__(self, id, client_ID, number_of_items, pollutionStatus_ID, applicationStatus_ID):
         self.Application_ID = id
         self.Client_ID = client_ID
         self.Number_of_items = number_of_items
         self.PollutionStatus_ID = pollutionStatus_ID
-        self.Time_of_receipt = time_of_receipt
         self.ApplicationStatus_ID = applicationStatus_ID
 

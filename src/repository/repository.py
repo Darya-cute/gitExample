@@ -144,10 +144,10 @@ class ApplicationRepository:
         conn = self.db.get_connection()
         cursor = conn.cursor()
         cursor.execute(
-            'SELECT Application_ID, Client_ID, Number_of_items, PollutionStatus_ID, Time_of_receipt, ApplicationStatus_ID FROM Application')
+            'SELECT Application_ID, Client_ID, Number_of_items, PollutionStatus_ID, ApplicationStatus_ID FROM Application')
         applications = []
         for row in cursor.fetchall():
-            applications.append(Application(row[0], row[1], row[2], row[3], row[4], row[5]))
+            applications.append(Application(row[0], row[1], row[2], row[3], row[4]))
         conn.close()
         return applications
 
@@ -155,11 +155,11 @@ class ApplicationRepository:
         conn = self.db.get_connection()
         cursor = conn.cursor()
         cursor.execute(
-            'SELECT Application_ID, Client_ID, Number_of_items, PollutionStatus_ID, Time_of_receipt, ApplicationStatus_ID FROM Application WHERE Client_ID = ?',
+            'SELECT Application_ID, Client_ID, Number_of_items, PollutionStatus_ID, ApplicationStatus_ID FROM Application WHERE Client_ID = ?',
             (client_id,))
         applications = []
         for row in cursor.fetchall():
-            applications.append(Application(row[0], row[1], row[2], row[3], row[4], row[5]))
+            applications.append(Application(row[0], row[1], row[2], row[3], row[4]))
         conn.close()
         return applications
 
@@ -185,12 +185,12 @@ class ApplicationRepository:
         conn = self.db.get_connection()
         cursor = conn.cursor()
         cursor.execute(
-            'SELECT Application_ID, Client_ID, Number_of_items, PollutionStatus_ID, Time_of_receipt, ApplicationStatus_ID FROM Application WHERE Application_ID = ?',
+            'SELECT Application_ID, Client_ID, Number_of_items, PollutionStatus_ID, ApplicationStatus_ID FROM Application WHERE Application_ID = ?',
             (application_id,))
         row = cursor.fetchone()
         conn.close()
         if row:
-            return Application(row[0], row[1], row[2], row[3], row[4], row[5])
+            return Application(row[0], row[1], row[2], row[3], row[4])
         return None
 
     def update_status(self, application_id, status_id):

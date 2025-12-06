@@ -2,7 +2,6 @@
   {
     "application_id": 2,
     "number_of_items": 14,
-    "time_of_receipt": "2025-11-24 23:48:53",
     "client": {
       "client_id": 3,
       "last_name": "Федоров",
@@ -25,7 +24,6 @@
   {
     "application_id": 3,
     "number_of_items": 15,
-    "time_of_receipt": "2025-11-26 21:46:14",
     "client": {
       "client_id": 6,
       "last_name": "Михалков",
@@ -38,6 +36,28 @@
       "pollution_status_id": "HIGH",
       "name": "Сильное",
       "comment": "Сильное загрязнение"
+    },
+    "application_status": {
+      "application_status_id": "IN_PROGRESS",
+      "name": "В обработке",
+      "comment": "Заявка в работе"
+    }
+  },
+  {
+    "application_id": 4,
+    "number_of_items": 5,
+    "client": {
+      "client_id": 1,
+      "last_name": "Невская",
+      "name": "Есения",
+      "patronymic": "Ивановна",
+      "phone_number": 79161234567,
+      "email": "nevskay@mail.ru"
+    },
+    "pollution_status": {
+      "pollution_status_id": "LOW",
+      "name": "Небольшое",
+      "comment": "Легкое загрязнение"
     },
     "application_status": {
       "application_status_id": "IN_PROGRESS",
